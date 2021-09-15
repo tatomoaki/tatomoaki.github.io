@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
+from datetime import datetime
+
 AUTHOR = 'tatomoaki'
 SITENAME = 'tatomoaki'
 SITEURL = ''
@@ -10,6 +12,12 @@ PATH = 'content'
 TIMEZONE = 'Africa/Johannesburg'
 
 DEFAULT_LANG = 'en'
+
+
+SITETITLE = 'Tato Moaki'
+SITESUBTITLE = 'Full Stack Software Engineer'
+SITEDESCRIPTION = 'python, AWS, Django, Flask, Angular'
+SITELOGO = '/images/me.jpg'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -32,3 +40,4 @@ DEFAULT_PAGINATION = False
 #RELATIVE_URLS = True
 
 THEME = '/Users/tato/pelican-themes/Flex'
+COPYRIGHT_YEAR = datetime.now().year
