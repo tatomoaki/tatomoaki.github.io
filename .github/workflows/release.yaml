@@ -18,8 +18,8 @@ jobs:
           pelican==4.7.2
           markdown==3.3.2
     - name: Build and Publish
-      uses: iranzo/gh-pages-pelican-action@1.0.1
+      uses: iranzo/gh-pages-pelican-action@1.0.3
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SOURCE_FOLDER: .
-        PELICAN_CONFIG_FILE: ./publishconf.py
+        SOURCE_FOLDER: content
+        PELICAN_CONFIG_FILE: publishconf.py
