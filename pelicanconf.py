@@ -39,5 +39,5 @@ DEFAULT_PAGINATION = False
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME = '/Users/tatomoaki/pelican-themes/Flex'
+THEME = 'templates/flex'
 COPYRIGHT_YEAR = datetime.now().year
