@@ -21,5 +21,5 @@ jobs:
       uses: iranzo/gh-pages-pelican-action@1.0.1
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        SOURCE_FOLDER: docs/content
-        PELICAN_CONFIG_FILE: docs/publishconf.py
+        SOURCE_FOLDER: .
+        PELICAN_CONFIG_FILE: ./publishconf.py
