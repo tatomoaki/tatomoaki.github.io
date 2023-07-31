@@ -1,0 +1,42 @@
+baseURL = '/'
+languageCode = 'en-us'
+paginate = "10"
+title = 'Tato Moaki'
+theme = 'mainroad'
+
+[Params]
+    mainSections = ["post"]
+
+[Params.logo]
+    image = false
+    title = "Tato Moaki"
+    subtitle = "Software Engineer"
+  
+[menu]
+    [[menu.main]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+        weight = 1
+    [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 2
+
+[Params.sidebar]
+  home = "right" 
+  list = "left"  
+  single = false
+  widgets = ["recent", "categories", "taglist", "social"]
+
+[Params.widgets]
+  recent_num = 5
+  categories_counter = false 
+  tags_counter = false 
+
+
+[Params.widgets.social]
+  cached = true
+  linkedin = "tatomoaki"
+  email = "kwamemoaki@gmail.com"
