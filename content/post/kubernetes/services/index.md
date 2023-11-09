@@ -18,9 +18,11 @@ The diagram below helps visualize a service object. `Pod1` and `Pod3` are labell
 
 In this exercise, we'll be using [minikube](https://minikube.sigs.k8s.io/docs/start/) and [kubectl v1.21.5](https://kubernetes.io/docs/tasks/tools/#kubectl) to create and expose an redis deployment as a service.  We'll also look at the different types of service objects kubernetes provides.
 
-### Create a Deployment Resource
+{{< toc >}}
+
+## Create a Deployment Resource
 1. Firstly, create a deployment with two pod replicas running `redis:alpine` image and set container port to `6379`
-```
+```bash {style=github}
 ➜  ~ kubectl create deploy redis --image=redis:alpine --replicas=2 --port=6379
 deployment.apps/redis created
 ```
@@ -38,7 +40,7 @@ redis-84fd6b8dcc-mdqst   10.244.0.19
 redis-84fd6b8dcc-rs2f6   10.244.0.20
 ```
 
-### Expose a resource as a Service
+## Expose a resource as a Service
 Create a ClusterIP service that exposes our deployment. Later we will look at what a ClusterIP service is and also look at other service types.
 
 1. Expose a Deployment as a service
@@ -71,7 +73,6 @@ http://127.0.0.1:50485
 ➜  ~ redis-cli -u redis://127.0.0.1:50485/0 PING
 PONG
 ```
-
 
 ## Types of Services 
 There are four kinds of Services that Kubernetes provides. The field `spec.template.Type` on a Service manifest can be edited to describe how the service is exposed outside the cluster.
@@ -111,7 +112,7 @@ service/redis-svc patched
 ### 4. ExternalName
 Aliases the service to the specified external name `spec.externalName`
 
-```
+```yml {style=github}
 apiVersion: v1
 kind: Service
 metadata:
