@@ -39,4 +39,5 @@ theme = 'mainroad'
 [Params.widgets.social]
   cached = true
   linkedin = "tatomoaki"
+  github = "tatomoaki"
   email = "kwamemoaki@gmail.com"
