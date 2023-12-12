@@ -6,7 +6,7 @@ tags: [VPC, S3, EC2, Terraform]
 draft: False
 ---
 
-Amazon Virtual Private Cloud (VPC) is one of the core foundational services encountered when working with Amazon Web Services (AWS). It allows you to create a logically isolated virtual network in which AWS resources can be launched. 
+Amazon Virtual Private Cloud (VPC) is one of the core foundational services in Amazon Web Services (AWS). It allows you to create a logically isolated virtual network in which AWS resources can be launched. 
 A VPC is created within a region and subnets are created within a region's Availability Zones (AZs). 
 
 In this guide, we'll be using Terraform to create a simple nondefault VPC with public and private subnets, configure an Internet Gateway (IGW) to allow public subnets to connect to the internet and a Network Address Translation (NAT) gateway to allow resources that reside in private subnets to connect to the internet.  The diagram below demonstrates the architecture we shall build.
@@ -26,6 +26,7 @@ To get started with this guide, we'll need to have the following:
  - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
  - AWS Acccount and credentials
 
+The guide assumes basic working knowledge of Terraform and AWS.
   
 ## 1. Create a VPC
 We will create our VPC named `Custom VPC` with IPv4 CIDR block `10.0.0.0/16` in `af-south-1` region. This will give us a total of 65,536  host IP addresses that can be assigned to resources created in the VPC. This CIDR block should not overlap with any existing VPC's CIDR block in your AWS region and cannot be modified once created.  
